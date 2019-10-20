@@ -81,8 +81,8 @@ public class SchemerBetaControl implements Initializable {
     @FXML
     /**
      *This method is attached to the apply color button!
-     * It will take the current shape selected in the combo box and apply the current color to that shape's fill or stroke.
-     * It will only apply the color to the shape's stroke if the stroke toggle is on.
+     * <p>It will take the current shape selected in the combo box and apply the current color to that shape's fill or stroke.
+     * <p>It will only apply the color to the shape's stroke if the stroke toggle is on.
      * @param event
      **/
     void applyColor(MouseEvent event) {
@@ -170,15 +170,18 @@ public class SchemerBetaControl implements Initializable {
     @FXML
     void quitToMenu(MouseEvent event) throws IOException {
 
+        try {
+            Stage stage = (Stage) quitButton.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("MainMenuMark.fxml"));
 
-        Stage stage = (Stage) quitButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenuMark.fxml"));
-
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }catch(NullPointerException e){
+            System.out.println("There's no menu to go to silly!");
+            System.out.println("Next time install the menu file first!");
+        }
     }
-
     @FXML
     void selectShape(MouseEvent event) {
     }

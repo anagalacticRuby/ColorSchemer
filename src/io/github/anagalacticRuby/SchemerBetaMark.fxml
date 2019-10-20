@@ -22,7 +22,8 @@
 <?import javafx.scene.text.Font?>
 
 <TabPane minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE"
-         xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.anagalacticRuby.SchemerBetaControl">
+         xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="io.github.anagalacticRuby.SchemerBetaControl">
     <Tab text="Circles">
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <VBox layoutX="480.0" layoutY="425.0" prefHeight="39.0" prefWidth="170.0"

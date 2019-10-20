@@ -35,21 +35,21 @@ public class MainMenuControl {
 
     @FXML
     void startSchemer(MouseEvent event) throws IOException {
-
-        if (radioAlpha.isSelected()) {
-            Stage stage = (Stage) radioAlpha.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("SchemerAlphaMark.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } else if (radioBeta.isSelected()) {
-            Stage stage = (Stage) radioBeta.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("SchemerBetaMark.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } else if (radioGamma.isSelected()) {
-            System.out.println("Coming Soon!");
+        try {
+            if (radioAlpha.isSelected()) {
+                Stage stage = (Stage) radioAlpha.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("SchemerAlphaMark.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            } else if (radioBeta.isSelected()) {
+                Stage stage = (Stage) radioBeta.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("SchemerBetaMark.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            } else if (radioGamma.isSelected()) {
+                System.out.println("Coming Soon!");
             /*
             Stage stage = (Stage) radioGamma.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("SchemerGammaMark.fxml"));
@@ -57,7 +57,10 @@ public class MainMenuControl {
             stage.setScene(scene);
             stage.show();*/
 
+            }
+        } catch (NullPointerException N) {
+            System.out.println("Please make sure you have the proper versions downloaded!");
+            System.out.println("Otherwise you won't be going anywhere.");
         }
     }
-
 }
