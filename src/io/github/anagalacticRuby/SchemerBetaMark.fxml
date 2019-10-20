@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<TabPane minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.anagalacticRuby.SchemerBetaControl">
+    <Tab text="Circles">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <VBox layoutX="480.0" layoutY="425.0" prefHeight="39.0" prefWidth="170.0"
+                  AnchorPane.bottomAnchor="5.400000000000034" AnchorPane.rightAnchor="-2.8421709430404007E-14"/>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="85.0" layoutX="481.0"
+                       layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="119.0"
+                       AnchorPane.bottomAnchor="-5.399999999999977" AnchorPane.rightAnchor="0.0"/>
+            <Ellipse fx:id="gradient1" layoutX="210.0" layoutY="91.0" radiusX="68.0" radiusY="76.0"
+                     stroke="WHITE" strokeType="OUTSIDE">
+                <fill>
+                    <LinearGradient>
+                        <stops>
+                            <Stop color="#05121e"/>
+                            <Stop color="#1c4f7f" offset="0.999043187284325"/>
+                            <Stop color="#1c4f7f" offset="1.0"/>
+                        </stops>
+                    </LinearGradient>
+                </fill>
+            </Ellipse>
+            <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="120.0" layoutY="86.0"
+                    onMouseClicked="#changeFill2" radius="72.0" stroke="BLACK" strokeWidth="3.0"/>
+            <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="300.0" layoutY="86.0" radius="72.0"
+                    stroke="BLACK" strokeWidth="3.0"/>
+            <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="490.0" layoutY="86.0" radius="72.0"
+                    stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0"/>
+            <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="120.0" layoutY="280.0" radius="72.0"
+                    stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0"/>
+            <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="300.0" layoutY="280.0" radius="72.0"
+                    stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0"/>
+            <Circle fx:id="circle6" fill="DODGERBLUE" layoutX="490.0" layoutY="280.0" radius="72.0"
+                    stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0"/>
+            <ToolBar fx:id="toolBarA" layoutY="430.0" maxHeight="800.0" maxWidth="1.7976931348623157E308"
+                     minHeight="40.0" prefHeight="50.0" prefWidth="600.0" stylesheets="@ColorStylin.css"
+                     AnchorPane.bottomAnchor="-0.39999999999997726" AnchorPane.leftAnchor="0.0"
+                     AnchorPane.rightAnchor="0.0">
+                <ColorPicker fx:id="colorPicker" editable="true" onAction="#changeFill" prefHeight="26.0"
+                             prefWidth="112.0" promptText="Change the color of the shapes!"/>
+                <ComboBox fx:id="comboShapeNum" onMouseClicked="#selectShape" prefHeight="26.0"
+                          prefWidth="122.0" promptText="Shape Number" visibleRowCount="6">
+                    <tooltip>
+                        <Tooltip text="Select a Shape" textAlignment="CENTER">
+                            <font>
+                                <Font name="Verdana" size="14.0"/>
+                            </font>
+                        </Tooltip>
+                    </tooltip>
+                </ComboBox>
+                <Button fx:id="btnTest" contentDisplay="CENTER" mnemonicParsing="false"
+                        onMouseClicked="#applyColor" text="Apply Color" textAlignment="CENTER"/>
+                <ToggleButton fx:id="toggleStroke" mnemonicParsing="false" text="Apply to Stroke"
+                              textAlignment="CENTER"/>
+            </ToolBar>
+            <TitledPane alignment="CENTER" contentDisplay="CENTER" layoutX="533.0" layoutY="389.0"
+                        maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="84.0"
+                        prefWidth="114.0" text="Options" AnchorPane.bottomAnchor="-3.3999999999999773"
+                        AnchorPane.rightAnchor="2.9999999999999716">
+                <padding>
+                    <Insets bottom="10.0"/>
+                </padding>
+                <Label text="Quit to Menu">
+                    <graphic>
+                        <Button fx:id="quitButton" mnemonicParsing="false" onMouseClicked="#quitToMenu"
+                                text="QUIT" wrapText="true">
+                            <font>
+                                <Font size="10.0"/>
+                            </font>
+                        </Button>
+                    </graphic>
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="1.0" right="2.0" top="5.0"/>
+                    </padding>
+                </Label>
+            </TitledPane>
+        </AnchorPane>
+    </Tab>
+    <Tab text="Squares">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+    </Tab>
+    <Tab text="Color Scheme">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <TilePane alignment="CENTER" hgap="20.0" orientation="VERTICAL" prefHeight="211.0" prefWidth="346.0"
+                      vgap="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <Circle fx:id="circle1S" fill="DODGERBLUE" radius="40.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+                <Circle fx:id="circle4S" fill="DODGERBLUE" radius="40.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+                <Circle fx:id="circle2S" fill="DODGERBLUE" radius="40.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+                <Circle fx:id="circle5S" fill="DODGERBLUE" radius="40.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+                <Circle fx:id="circle3S" fill="DODGERBLUE" radius="40.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+                <Circle fx:id="circle6S" fill="DODGERBLUE" radius="40.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+            </TilePane>
+        </AnchorPane>
+    </Tab>
+</TabPane>

@@ -1,15 +1,16 @@
-#toolBarA{
+#toolBarA {
     -fx-background-color: lightgreen;
 }
 
-#toggleStroke:selected{
+#toggleStroke:selected {
     -fx-base: #10ff80;
     -fx-background-radius: 6%;
     -fx-border-color: rgba(128, 0, 122, 10);
     -fx-border-radius: 6%;
 }
-#toggleStroke:pressed{
-    -fx-border-color: rgb(49,89,23);
+
+#toggleStroke:pressed {
+    -fx-border-color: rgb(49, 89, 23);
     -fx-border-radius: 5;
-    -fx-padding: 3,6,6,6;
+    -fx-padding: 3, 6, 6, 6;
 }
