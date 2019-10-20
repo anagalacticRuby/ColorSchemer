@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+
+<AnchorPane prefHeight="400.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SchemerAlphaControl">
+   <children>
+      <ColorPicker fx:id="colorPick" layoutX="134.0" layoutY="271.0" />
+      <Circle fx:id="circleOuter" fill="#09ff3e" layoutX="237.8000030517578" layoutY="117.0" radius="100.0" stroke="DIMGRAY" strokeType="OUTSIDE" strokeWidth="2.0" />
+      <Circle fx:id="circleMiddle" fill="DODGERBLUE" layoutX="237.39999389648438" layoutY="117.4000015258789" radius="65.0" stroke="DIMGRAY" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" />
+      <Circle fx:id="circleInner" fill="#f02fe3" layoutX="238.0" layoutY="117.19999694824219" radius="40.0" stroke="DIMGRAY" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="1.5" />
+      <TilePane alignment="CENTER" layoutY="294.0" prefHeight="62.0" prefWidth="480.0">
+         <children>
+            <RadioButton fx:id="radioOuter" mnemonicParsing="false" onMouseClicked="#moveIndicator" selected="true" text="Outer Circle">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioMiddle" mnemonicParsing="false" onMouseClicked="#moveIndicator" text="Middle Circle" toggleGroup="$group" />
+            <RadioButton fx:id="radioInner" mnemonicParsing="false" onMouseClicked="#moveIndicator" text="Inner Circle" toggleGroup="$group" />
+         </children>
+      </TilePane>
+      <Button fx:id="colorButton" alignment="CENTER" layoutX="301.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#applyColor" text="Apply Color" textFill="DARKGREEN" />
+      <Polygon fx:id="shapeIndicator" fill="#9c0000" layoutX="20" layoutY="142.0" points="108.0, -34.00001525878906, 59.20000457763672, -34.00001525878906, 69.79999542236328, -24.199996948242188, 108.0, -20.800003051757812, 108.0, -7.5999908447265625, 125.39999389648438, -27.599990844726562, 108.0, -48.40000915527344" stroke="#00692f" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="1.5" />
+   </children>
+</AnchorPane>
