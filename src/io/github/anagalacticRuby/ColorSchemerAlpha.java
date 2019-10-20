@@ -1,4 +1,4 @@
-package sample;
+package io.github.anagalacticRuby;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

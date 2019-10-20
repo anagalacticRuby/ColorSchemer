@@ -1,4 +1,4 @@
-package sample;
+package io.github.anagalacticRuby;
 
 import javafx.animation.PathTransition;
 import javafx.animation.TranslateTransition;
@@ -71,7 +71,7 @@ public class SchemerAlphaControl {
         translateIndicator.setDuration(Duration.millis(1000));
         //The following line sets the indicator as the node being moved.
         translateIndicator.setNode(shapeIndicator);
-        /**
+        /*
          * The if-else chain below determines where the arrow is going to translate
          * to depending on which radio button is selected.
          */
