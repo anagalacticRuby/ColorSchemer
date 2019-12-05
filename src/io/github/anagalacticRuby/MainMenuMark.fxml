@@ -8,31 +8,27 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-      prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/1.8.191" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="io.github.anagalacticRuby.MainMenuControl">
     <Label fx:id="mainTitle" alignment="CENTER" layoutX="140.0" layoutY="57.0" text="Welcome to ColorSchemer!"
            wrapText="true">
-        <font>
-            <Font name="GLYPHICONS Halflings Regular" size="24.0"/>
-        </font>
     </Label>
     <Group layoutX="132.0" layoutY="156.0">
-        <RadioButton fx:id="radioAlpha" mnemonicParsing="false" selected="true" text="RadioButton">
+        <RadioButton fx:id="radioAlpha" mnemonicParsing="false" styleClass="alpha-radio" stylesheets="@ColorStyler.css"
+                     text="Version Alpha">
             <toggleGroup>
                 <ToggleGroup fx:id="versionSelect"/>
             </toggleGroup>
         </RadioButton>
-        <RadioButton fx:id="radioBeta" layoutY="35.0" mnemonicParsing="false" text="RadioButton"
-                     toggleGroup="$versionSelect"/>
-        <RadioButton fx:id="radioGamma" layoutY="71.0" mnemonicParsing="false" text="RadioButton"
+        <RadioButton fx:id="radioBeta" layoutY="35.0" mnemonicParsing="false" styleClass="beta-button"
+                     text="Version Beta" toggleGroup="$versionSelect"/>
+        <RadioButton fx:id="radioGamma" layoutY="71.0" mnemonicParsing="false" text="Version Gamma"
                      toggleGroup="$versionSelect"/>
     </Group>
     <Label layoutX="132.0" layoutY="353.0" text="The most recent version is:"/>
-    <Button fx:id="DaBigButton" layoutX="220.0" layoutY="283.0" mnemonicParsing="false"
-            onMouseClicked="#startSchemer" text="Ready to Color!" textAlignment="CENTER" textFill="#00af17"
-            wrapText="true">
+    <Button fx:id="DaBigButton" layoutX="220.0" layoutY="283.0" mnemonicParsing="false" onMouseClicked="#startSchemer"
+            text="Ready to Color!" textAlignment="CENTER" textFill="#00af17" wrapText="true">
         <font>
             <Font name="MV Boli" size="18.0"/>
         </font>

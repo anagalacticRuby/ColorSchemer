@@ -1,0 +1,49 @@
+/**
+This is the CSS file for ColorSchemer!
+All the pretty magic happens here.
+@author: anagalacticRuby
+ */
+
+#toolBarA {
+    -fx-background-color: lightgreen;
+}
+
+#toggleStroke:selected {
+    -fx-base: #10ff80;
+    -fx-background-radius: 6%;
+    -fx-border-color: rgba(128, 0, 122, 10);
+    -fx-border-radius: 6%;
+}
+
+#toggleStroke:pressed {
+    -fx-border-color: rgb(49, 89, 23);
+    -fx-border-radius: 5;
+    -fx-padding: 3, 6, 6, 6;
+}
+
+
+/*Following code is for the ColorSchemerAlpha build*/
+.alpha-picker {
+    -fx-background-color: #6e645a;
+    -fx-background-radius: 5 5 10 5;
+    -fx-base: #6e4837;
+
+}
+
+.alpha-radio {
+    -fx-base: goldenrod;
+    -fx-font-family: "Courier New";
+}
+
+.alpha-button {
+    -fx-base: #94d29e;
+    -fx-background-radius: 5 5 10 5;
+}
+
+.alpha-background {
+    -fx-background-color: #d2a886;
+}
+
+/****************************************************/
+.beta-button {
+}

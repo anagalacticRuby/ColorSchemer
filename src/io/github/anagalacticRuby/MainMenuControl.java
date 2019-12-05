@@ -13,6 +13,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * The controller for the Main Menu of ColorSchemer
+ * @author anagalacticRuby
+ */
 public class MainMenuControl {
 
     @FXML
